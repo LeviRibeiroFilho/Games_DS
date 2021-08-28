@@ -1,0 +1,96 @@
+﻿@model PORFAVORFUNCIONA3.Models.Funcionario
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Área do Funcionário</h2>
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div>
+            <label for="cod_func">Código do Funcionário:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cod_func)
+            @Html.ValidationMessageFor(model => model.Cod_func)
+        </div>
+
+        <div>
+            <label for="nome_func">Nome:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome_func)
+            @Html.ValidationMessageFor(model => model.Nome_func)
+        </div>
+
+
+        <div>
+            <label for="CPF_func">CPF:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CPF_func)
+            @Html.ValidationMessageFor(model => model.CPF_func)
+        </div>
+
+
+        <div>
+            <label for="RG_func">RG:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RG_func)
+            @Html.ValidationMessageFor(model => model.RG_func)
+        </div>
+
+
+        <div>
+            <label for="DataDN_func">Data de Nascimento:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataDN_func)
+            @Html.ValidationMessageFor(model => model.DataDN_func)
+        </div>
+
+
+        <div>
+            <label for="Endereco_func">Endereço:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Endereco_func)
+            @Html.ValidationMessageFor(model => model.Endereco_func)
+        </div>
+
+        <div>
+            <label for="Tel_func">Celular:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tel_func)
+            @Html.ValidationMessageFor(model => model.Tel_func)
+        </div>
+        <div>
+            <label for="Email_func">Email:</label>
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Email_func)
+            @Html.ValidationMessageFor(model => model.Email_func)
+        </div>
+
+        <div>
+            <label for="Cargo_func">Cargo:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cargo_func)
+            @Html.ValidationMessageFor(model => model.Cargo_func)
+        </div>
+
+        <br />
+
+        <p><input type="submit" value="Cadastrar" /></p>
+    </fieldset>
+@section scripts{
+@Scripts.Render("~/bundles/jqueryval");
+
+
+}}

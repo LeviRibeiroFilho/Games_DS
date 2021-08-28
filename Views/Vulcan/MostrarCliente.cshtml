@@ -1,0 +1,56 @@
+﻿@model PORFAVORFUNCIONA3.Models.Cliente
+@{
+    ViewBag.Title = "MostrarCliente";
+}
+
+<h2>Dados Cadastrados:</h2>
+<fieldset>
+    <div>
+        <label for="Nome_client">Nome:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Nome_client)
+    </div>
+    <br />
+
+    <div>
+        <label for="CPF_client">CPF:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.CPF_client)
+    </div>
+    <br />
+
+    <div>
+        <label for="DataDN_client">Data de Nascimento:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.DataDN_client)
+    </div>
+    <br />
+
+    <div>
+        <label for="Email_client">Email:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Email_client)
+    </div>
+    <br />
+
+    <div>
+        <label for="Tel_client">Telefone:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Tel_client)
+    </div>
+    <br />
+
+    <div>
+        <label for="Endereco_client">Endereço:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Endereco_client)
+    </div>
+    <hr />
+    <p>@Html.ActionLink("Voltar", "Index")</p>
+</fieldset>

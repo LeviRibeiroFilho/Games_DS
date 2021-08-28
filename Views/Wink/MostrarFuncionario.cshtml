@@ -1,0 +1,75 @@
+﻿@model PORFAVORFUNCIONA3.Models.Funcionario
+@{
+    ViewBag.Title = "MostrarFuncionario";
+}
+<h2>Dados Cadastrados:</h2>
+
+<fieldset>
+    <div>
+        <label for="Cod_func">Código do Funcionário:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Cod_func)
+    </div><br />
+
+    <div>
+        <label for="Nome_func">Nome:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Nome_func)
+    </div><br />
+
+    <div>
+        <label for="CPF_func">CPF:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.CPF_func)
+
+    </div><br />
+
+    <div>
+        <label for="RG_func">RG:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.RG_func)
+
+    </div><br />
+
+    <div>
+        <label for="DataDN_func">Data de Nascimento:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.DataDN_func)
+    </div><br />
+
+    <div>
+        <label for="Endereco_func">Endereço:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Endereco_func)
+    </div><br />
+
+    <div>
+        <label for="Tel_func">Celular:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Tel_func)
+    </div><br />
+
+    <div>
+        <label for="Email_func">Email:</label>
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Email_func)
+    </div><br />
+
+    <div>
+        <label for="Cargo_func">Cargo:</label>
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Cargo_func)
+
+    </div><hr />
+    <p>@Html.ActionLink("Voltar", "Index")</p>
+</fieldset>
+

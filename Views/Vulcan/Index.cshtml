@@ -1,0 +1,67 @@
+﻿@model PORFAVORFUNCIONA3.Models.Cliente
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Área de cadastro do Cliente</h2>
+
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div>
+            <label for="Nome_client">Nome:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome_client)
+            @Html.ValidationMessageFor(model => model.Nome_client)
+        </div>
+
+        <div>
+            <label for="CPF_client">CPF:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CPF_client)
+            @Html.ValidationMessageFor(model => model.CPF_client)
+        </div>
+
+        <div>
+            <label for="Versao_jogo">Data de Nascimento:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataDN_client)
+            @Html.ValidationMessageFor(model => model.DataDN_client)
+        </div>
+
+        <div>
+            <label for="Dev_jogo">Email:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email_client)
+            @Html.ValidationMessageFor(model => model.Email_client)
+        </div>
+
+        <div>
+            <label for="Genero_jogo">Telefone:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tel_client)
+            @Html.ValidationMessageFor(model => model.Tel_client)
+        </div>
+
+        <div>
+            <label for="FaixaEtaria_jogo">Endereço:</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Endereco_client)
+            @Html.ValidationMessageFor(model => model.Endereco_client)
+        </div>
+        <br />
+        <p><input type="submit" value="Cadastrar" /></p>
+    </fieldset>
+
+
+    @section scripts{
+        @Scripts.Render("~/bundles/jqueryval");
+    }}

@@ -1,0 +1,90 @@
+﻿@model PORFAVORFUNCIONA3.Models.Jogo
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cadastro do jogo:</h2>
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true)
+<fieldset>
+    <div>
+        <label for="Cod_jogo">Código do Jogo:</label>
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Cod_jogo)
+        @Html.ValidationMessageFor(model => model.Cod_jogo)
+    </div>
+
+    <div>
+        <label for="Nome_jogo">Nome do Jogo:</label>
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Nome_jogo)
+        @Html.ValidationMessageFor(model => model.Nome_jogo)
+    </div>
+
+    <div>
+        <label for="Versao_jogo">Versão:</label>
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Versao_jogo)
+        @Html.ValidationMessageFor(model => model.Versao_jogo)
+    </div>
+
+    <div>
+        <label for="Dev_jogo">Desevolvedor:</label>
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Dev_jogo)
+        @Html.ValidationMessageFor(model => model.Dev_jogo)
+    </div>
+
+    <div>
+        <label for="Genero_jogo">Gênero:</label>
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Genero_jogo)
+        @Html.ValidationMessageFor(model => model.Genero_jogo)
+    </div>
+
+    <div>
+        <label for="FaixaEtaria_jogo">Faixa Etária indicada:</label>
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.FaixaEtaria_jogo)
+        @Html.ValidationMessageFor(model => model.FaixaEtaria_jogo)
+    </div>
+
+    <div>
+        <label for="Plataforma_jogo">Plataforma em que ficará disponível:</label>
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Plataforma_jogo)
+        @Html.ValidationMessageFor(model => model.Plataforma_jogo)
+    </div>
+
+    <div>
+        <label for="AnodeLanc_jogo">O ano de Lançamento:</label>
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.AnodeLanc_jogo)
+        @Html.ValidationMessageFor(model => model.AnodeLanc_jogo)
+    </div>
+
+    <div>
+        <label for="Sinopse_jogo">Sinopse:</label>
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Sinopse_jogo)
+        @Html.ValidationMessageFor(model => model.Sinopse_jogo)
+    </div>
+    <br />
+    <p><input type="submit" value="Cadastrar" /></p>
+</fieldset>
+
+
+    @section scripts{
+        @Scripts.Render("~/bundles/jqueryval");
+    }}
